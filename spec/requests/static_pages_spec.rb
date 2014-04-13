@@ -17,4 +17,11 @@ describe "Static pages" do
       expect(page).to have_content('Help')
     end
   end
+  describe "about page" do
+    it "about us page" do
+      visit '/static_pages/about'
+      expect(page).to have_content('About')
+      expect(page).to have_title('About')
+    end
+  end
 end
